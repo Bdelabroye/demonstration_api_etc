@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../front/index.html'));
     });
 
+app.get('/api/test', (req, res) => {
+    res.json({ message: 'API test réussi' });
+});
+
     //à deux paramètres : le port et une fonction de rappel/anonyme/callback
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
